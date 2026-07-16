@@ -217,9 +217,36 @@ export function Orcamento() {
               </dl>
             </div>
 
-            <p className="mt-10 border-t border-prata/15 pt-5 text-sm leading-relaxed text-prata/65">
-              {ATENDIMENTO.nota}
-            </p>
+            <div className="mt-10 border-t border-prata/15 pt-5">
+              <p className="flex items-center gap-2.5 text-sm text-dourado">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="8"
+                    cy="8"
+                    r="6.5"
+                    stroke="currentColor"
+                    strokeWidth="1.3"
+                  />
+                  <path
+                    d="M8 4.5V8l2.5 1.5"
+                    stroke="currentColor"
+                    strokeWidth="1.3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                Respondemos em poucos minutos no horário comercial
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-prata/65">
+                {ATENDIMENTO.nota}
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

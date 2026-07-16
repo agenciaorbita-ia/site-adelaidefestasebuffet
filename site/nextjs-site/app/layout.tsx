@@ -27,11 +27,12 @@ const siteUrl = "https://adelaidefestasebuffet.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Adelaide Festas & Buffet — Buffet completo para o seu evento",
+    default:
+      "Buffet completo em Belo Horizonte — Adelaide Festas & Buffet",
     template: "%s | Adelaide Festas & Buffet",
   },
   description:
-    "Buffet completo para casamentos, debutantes, festas infantis e confraternizações em Belo Horizonte. Salão, decoração, bebidas, equipe e cortesias inclusas — há 8 anos transformando celebrações em memórias.",
+    "Buffet completo em Belo Horizonte para casamentos, debutantes, festas infantis e confraternizações. Salão, decoração, bebidas, equipe e cortesias inclusas — há 8 anos transformando celebrações em memórias.",
   keywords: [
     "buffet para festas",
     "buffet casamento",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Adelaide Festas & Buffet",
-    title: "Adelaide Festas & Buffet — Buffet completo para o seu evento",
+    title: "Buffet completo em Belo Horizonte — Adelaide Festas & Buffet",
     description:
       "Casamentos, debutantes, festas infantis e confraternizações com tudo incluso: salão, decoração, bebidas, equipe e cortesias.",
   },
@@ -62,6 +63,10 @@ const jsonLd = {
   telephone: "+55-31-99540-6622",
   url: siteUrl,
   sameAs: ["https://instagram.com/adelaidefestasebuffet"],
+  areaServed: {
+    "@type": "City",
+    name: "Belo Horizonte",
+  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Belo Horizonte",

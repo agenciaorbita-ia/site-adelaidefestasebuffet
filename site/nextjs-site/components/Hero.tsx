@@ -26,6 +26,32 @@ const entrada: Variants = {
   }),
 };
 
+const palavras: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.09, delayChildren: 0.35 } },
+};
+
+const palavra: Variants = {
+  hidden: { opacity: 0, y: 26 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
+function Estrelas() {
+  return (
+    <div className="flex gap-0.5 text-dourado" aria-hidden="true">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-current">
+          <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.9l-5.2 2.73.99-5.8-4.2-4.1 5.81-.84L10 1.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
@@ -36,6 +62,8 @@ export function Hero() {
   const yFoto = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const yTexto = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const opacidade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+
+  const tituloPalavras = HERO.titulo.split(" ");
 
   return (
     <section
@@ -51,11 +79,11 @@ export function Hero() {
         <div className="absolute inset-0 animate-kenburns">
           <Image
             src={heroImg}
-            alt="Mesa de buffet da Adelaide Festas & Buffet"
+            alt="Mesa de buffet da Adelaide Festas & Buffet em Belo Horizonte"
             fill
             className="object-cover"
             sizes="100vw"
-            quality={82}
+            quality={80}
             priority
             placeholder="blur"
           />
@@ -76,6 +104,24 @@ export function Hero() {
         className="pointer-events-none absolute right-16 top-36 hidden h-40 w-40 rounded-full border border-dourado/10 lg:block"
       />
 
+      {/* Badge de vidro — avaliações Google */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.7, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute right-10 top-[38%] z-10 hidden animate-float-slow rounded-xl border border-prata/25 bg-prata/10 px-5 py-4 backdrop-blur-md lg:block xl:right-20"
+      >
+        <div className="flex items-center gap-3">
+          <span className="font-display text-3xl font-medium text-prata">
+            5,0
+          </span>
+          <div>
+            <Estrelas />
+            <p className="mt-1 text-xs text-prata/75">avaliações no Google</p>
+          </div>
+        </div>
+      </motion.div>
+
       <motion.div
         style={reduce ? undefined : { y: yTexto, opacity: opacidade }}
         className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-28 pt-40"
@@ -90,15 +136,36 @@ export function Hero() {
           {HERO.script}
         </motion.p>
 
+        {/* Headline revelada palavra a palavra */}
         <motion.h1
-          custom={1}
           initial="hidden"
           animate="visible"
-          variants={entrada}
+          variants={reduce ? entrada : palavras}
+          custom={1}
           className="font-display mt-5 max-w-3xl text-4xl font-medium leading-[1.12] text-prata sm:text-5xl lg:text-6xl"
         >
-          {HERO.titulo}
+          {reduce
+            ? HERO.titulo
+            : tituloPalavras.map((p, i) => (
+                <motion.span
+                  key={`${p}-${i}`}
+                  variants={palavra}
+                  className="inline-block"
+                >
+                  {p}
+                  {i < tituloPalavras.length - 1 && " "}
+                </motion.span>
+              ))}
         </motion.h1>
+
+        {/* Filete dourado que se desenha */}
+        <motion.span
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 1.5, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-6 block h-px w-40 origin-left bg-gradient-to-r from-dourado to-dourado/0 sm:w-56"
+          aria-hidden="true"
+        />
 
         <motion.p
           custom={2}
