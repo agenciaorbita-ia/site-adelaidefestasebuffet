@@ -125,7 +125,7 @@ export function Orcamento() {
                   rows={3}
                   value={form.mensagem}
                   onChange={(e) => atualizar("mensagem", e.target.value)}
-                  placeholder="Conte sobre o salão, horário ou algum pedido especial"
+                  placeholder="Conte sobre o local, horário ou algum pedido especial"
                   className={`${inputBase} resize-none`}
                 />
               </label>

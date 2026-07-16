@@ -19,7 +19,7 @@ Landing page institucional premium. Stack: Next.js 16 (App Router, Turbopack) + 
 
 - `app/layout.tsx` — fontes (Playfair Display, Jost, Great Vibes via next/font), metadata, JSON-LD
 - `app/globals.css` — tokens da marca em `@theme` (cores `azul/prata/dourado/creme` + variações), keyframes, utilitário `btn-brilho` (brilho de botão), `scroll-margin-top` das seções, `:focus-visible`
-- `app/page.tsx` — composição: AnnouncementBar → Header → Hero → Servicos → EspecialDaCasa → Beneficios → Celebracoes → Historia → Galeria → DepoimentosMarquee → Orcamento → Footer → FloatingWhatsApp
+- `app/page.tsx` — composição: Header → Hero → Servicos → EspecialDaCasa → Beneficios → Celebracoes → Historia → Galeria → DepoimentosMarquee → Orcamento → Footer → FloatingWhatsApp
 - `lib/content.ts` — **todo o copy do site**; editar textos aqui, nunca hardcoded nos componentes
 - `lib/whatsapp.ts` — número, URLs `wa.me` e formatação da mensagem de orçamento
 - `lib/images.ts` — registro de fotos (chave string → static import)

@@ -35,3 +35,5 @@ Casada há 25 anos, mãe de três filhos, avó de uma neta. O sonho de ter o pr�
 **Valores centrais:** amor, honestidade e fé. Frase-guia usada pela própria Adelaide: "A palavra final vem de Deus. Nós apenas traçamos o caminho."
 
 **Condições comerciais:** disponibilidade de datas sempre sob consulta — orientar o cliente a entrar em contato para verificar a disponibilidade. (A antiga regra "segunda a domingo, exceto sábados" não é real — não usar.)
+
+**Cortesia:** o bolo de corte + 200 doces vale **apenas para eventos realizados no salão**. Em materiais de divulgação, comunicar de forma abrangente — ex.: "Em todos os eventos, oferecemos uma cortesia especial preparada com carinho para nossos clientes" — sem prometer bolo + doces fora do salão (corrigido em jul/2026).

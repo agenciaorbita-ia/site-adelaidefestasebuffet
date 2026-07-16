@@ -28,6 +28,10 @@ Estruturação: organizar processos internos e construir presença digital profi
 
 Setores sem processo definido ainda (financeiro, RH) — tratar como baixa prioridade até a organização interna e a presença digital avançarem.
 
+## Posicionamento do site (jul/2026)
+
+O site foi redirecionado para o **público adulto**: casamentos, festas de 15 anos, formaturas, bodas e eventos sociais. Sem menção a salão, decoração ou festa infantil (o card Festa Infantil virou Bodas). Materiais novos do site devem seguir esse recorte; Instagram e demais canais seguem o posicionamento geral da marca.
+
 ## Contexto com prazo
 
 Disponibilidade de datas é sempre sob consulta — em qualquer material comercial, usar algo como "Entre em contato para verificarmos a disponibilidade". (A antiga regra "segunda a domingo, exceto sábados" não é real — corrigida em jul/2026, não usar mais.)

@@ -14,7 +14,7 @@ export const NAV_LINKS = [
 export const HERO = {
   script: "Bem-vindos à Adelaide",
   titulo: "Onde o amor é celebrado, cuidamos de cada detalhe",
-  sub: "Buffet completo para casamentos, debutantes, festas infantis e confraternizações — salão, decoração, bebidas, equipe e cortesias inclusas, para você só aproveitar.",
+  sub: "Buffet completo para casamentos, festas de 15 anos, formaturas, bodas e eventos sociais — bebidas, equipe e cortesias inclusas, para você só aproveitar.",
   selos: [
     { titulo: "Tudo incluso", texto: "sem contratar nada à parte" },
     { titulo: "Equipe própria", texto: "do início ao fim da festa" },
@@ -63,7 +63,7 @@ export const BENEFICIOS = {
       icone: "check",
       titulo: "Tudo incluso de verdade",
       texto:
-        "Salão, buffet, decoração e todos os vasilhames no pacote — sem contratar nada à parte.",
+        "Buffet completo e todos os vasilhames no pacote — sem contratar nada à parte.",
     },
     {
       icone: "taca",
@@ -78,10 +78,10 @@ export const BENEFICIOS = {
         "Profissionais qualificados assegurando um serviço organizado do início ao fim da festa.",
     },
     {
-      icone: "bolo",
-      titulo: "Cortesia que adoça",
+      icone: "presente",
+      titulo: "Cortesia especial",
       texto:
-        "Bolo de corte + 200 doces de presente, um cuidado a mais para encantar seus convidados.",
+        "Em todos os eventos, oferecemos uma cortesia especial preparada com carinho para nossos clientes.",
     },
     {
       icone: "estrela",
@@ -164,9 +164,9 @@ export const CELEBRACOES = {
       img: "celebracao-debutante",
     },
     {
-      titulo: "Festas infantis",
-      texto: "Alegria para as crianças, tranquilidade para os pais.",
-      img: "celebracao-infantil",
+      titulo: "Bodas",
+      texto: "O amor que atravessa os anos merece ser celebrado.",
+      img: "celebracao-bodas",
     },
     {
       titulo: "Confraternizações",
@@ -186,7 +186,7 @@ export const HISTORIA = {
   citacao: "A palavra final vem de Deus. Nós apenas traçamos o caminho.",
   numeros: [
     { valor: 8, sufixo: "+", label: "anos de buffet" },
-    { valor: 200, sufixo: "", label: "doces de cortesia" },
+    { valor: 5, sufixo: ",0", label: "de avaliação no Google" },
     { valor: 100, sufixo: "%", label: "tudo incluso" },
   ],
 };
@@ -203,6 +203,16 @@ export const GALERIA = {
     "galeria-06",
     "galeria-07",
     "galeria-08",
+    "galeria-09",
+    "galeria-10",
+    "galeria-11",
+    "galeria-12",
+    "galeria-13",
+    "galeria-14",
+    "galeria-15",
+    "galeria-16",
+    "galeria-17",
+    "galeria-18",
   ],
 };
 
@@ -226,7 +236,8 @@ export const ORCAMENTO = {
   tiposEvento: [
     "Casamento",
     "Debutante (15 anos)",
-    "Festa infantil",
+    "Formatura",
+    "Bodas",
     "Confraternização",
     "Outro",
   ],

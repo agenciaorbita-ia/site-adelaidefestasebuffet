@@ -34,5 +34,9 @@ npm-debug.log*
 dados/*
 !dados/README.md
 
+# lixeira — itens fora de uso aguardando descarte definitivo (não versionar)
+lixeira/*
+!lixeira/README.md
+
 # imagens geradas dos carrosséis (regeneráveis via render.js — só as fontes vão pro repo)
 marketing/conteudo/*/instagram/

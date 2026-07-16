@@ -122,14 +122,23 @@ Quando o usuário pedir skill nova:
 
 Operação da Adelaide Festas & Buffet: buffet completo para eventos (casamentos, debutantes, festas infantis, confraternizações), com 8 anos de atuação e os bolos como diferencial histórico da marca.
 
+**Este workspace é exclusivo da Adelaide Festas & Buffet.** Todo conteúdo do negócio — site, Instagram, marketing, prospecção, projetos — é criado e mantido aqui. Outros clientes e outras estruturas ficam em outras pastas/repositórios; nunca misturar.
+
 **Estrutura de pastas:**
 - `_memoria/` — quem é a empresa, como falamos, foco atual
 - `identidade/` — marca aplicada em tudo que o sistema gera
-- `marketing/` — posts, carrosséis e conteúdo de Instagram
+  - `identidade/imagens/` — logos oficiais (azul, dourado, prata)
+  - `identidade/design-guide.md` — cores, tipografia e design system
+- `marketing/` — posts, carrosséis e conteúdo de Instagram (organizado por post em `conteudo/`)
+- `comercial/` — propostas (`comercial/propostas/`) e futura prospecção
 - `projetos/` — planos e especificações de projetos em andamento (site, catálogo)
+- `site/` — site institucional (`nextjs-site/` = app que a Vercel builda; `fotos/` = fotos originais)
 - `saidas/` — documentos pontuais
-- `dados/` — arquivos a analisar
-- `comercial/` e `operacoes/` — criar quando houver o primeiro material (propostas, agenda)
+- `dados/` — drop zone: arquivos a analisar (entrada, não arquivo final; esvaziar após processar)
+- `scripts/` — utilitários que as skills acionam (render, publicação em redes)
+- `templates/` — catálogos de skills e ferramentas do ÓrbitaOS
+- `lixeira/` — itens fora de uso aguardando descarte definitivo (não versionada; ver README dela)
+- `operacoes/` — criar quando houver o primeiro material (agenda de eventos)
 
 ## Sobre a empresa
 
@@ -157,8 +166,10 @@ Evitar: gíria e informalidade excessiva, jargão de marketing corporativo, ling
 
 ## Regras do sistema
 
+- **Nunca fazer commit ou push sem pedido explícito do usuário** — vale para todo o repositório (site, memória, marketing, tudo). Apenas preparar as alterações e avisar; commit só quando o usuário pedir (ex.: `/salvar`)
 - Cada setor tem sua pasta na raiz
 - Propostas comerciais salvar em `comercial/propostas/`
+- O que sair de uso não fica solto: mover para `lixeira/` (o usuário decide o descarte definitivo)
 - **Nunca** afirmar que pacotes valem "de segunda a domingo, exceto sábados" — essa regra não é real. Em qualquer material que fale de datas/dias de evento, usar sempre algo como: "Entre em contato para verificarmos a disponibilidade"
 - Consultar `identidade/design-guide.md` antes de qualquer peça visual (cores azul #161841, prata #F8FCFF, dourado #DEC27D) — inclui o design system completo do site
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   motion,
@@ -46,19 +46,39 @@ function IconeZoom() {
 /** Faixa horizontal vinculada ao scroll — desktop */
 function FaixaImersiva({ onAbrir }: { onAbrir: (i: number) => void }) {
   const ref = useRef<HTMLDivElement>(null);
+  const faixaRef = useRef<HTMLDivElement>(null);
+  // Deslocamento medido: largura da faixa menos a viewport, para a última
+  // foto sempre encostar na borda direita, independente do nº de fotos
+  const [sobra, setSobra] = useState(0);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end end"],
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-58%"]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, -sobra]);
+
+  useEffect(() => {
+    const medir = () => {
+      if (!faixaRef.current) return;
+      setSobra(
+        Math.max(faixaRef.current.scrollWidth - window.innerWidth, 0)
+      );
+    };
+    medir();
+    window.addEventListener("resize", medir);
+    return () => window.removeEventListener("resize", medir);
+  }, []);
 
   return (
-    <div ref={ref} className="relative h-[160vh]">
+    <div ref={ref} className="relative h-[300vh]">
       <div className="sticky top-0 flex h-screen flex-col justify-center gap-10 overflow-hidden">
         <div className="w-full px-5">
           <SectionHeader script={GALERIA.script} titulo={GALERIA.titulo} />
         </div>
-        <motion.div style={{ x }} className="flex items-center gap-6 pl-[6vw]">
+        <motion.div
+          ref={faixaRef}
+          style={{ x }}
+          className="flex items-center gap-6 px-[6vw]"
+        >
           {fotos.map((foto, i) => (
             <button
               key={i}

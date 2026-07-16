@@ -57,8 +57,10 @@ Elegante e clássico, com ornamentos florais que remetem ao logo (flor de lírio
 
 ## Logo
 
-- **Arquivo:** *(a receber — usuário enviou o logo no chat em duas versões: fundo escuro e fundo claro; precisa salvar manualmente em `identidade/logo.png`)*
-- **Versão para fundo escuro:** disponível — logo em preto funciona sobre fundos claros; para uso sobre o azul #161841, será necessária uma versão do logo em prata/branco
+- **Arquivos oficiais em `identidade/imagens/`:**
+  - `logo-azul.png` — para fundos claros (creme/prata)
+  - `logo-dourado.png` — para fundos escuros (azul #161841)
+  - `logo-prata.png` — alternativa para fundos escuros
 - **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentação
 - **Tamanho sugerido:** largura entre 120-200px nos HTMLs
 
@@ -80,7 +82,7 @@ Tokens consolidados na construção do site institucional. Usar como referência
 |---|---|---|
 | `azul` | #161841 | blocos escuros, texto sobre claro |
 | `azul-claro` | #262A5E | hover de botões azuis, variação |
-| `azul-profundo` | #0E102E | footer, overlays, barra de anúncio |
+| `azul-profundo` | #0E102E | footer, overlays |
 | `prata` | #F8FCFF | texto sobre azul, cards claros |
 | `dourado` | #DEC27D | CTAs, ícones, filetes |
 | `dourado-claro` | #EAD9AC | hover do dourado |

@@ -1,9 +1,12 @@
 # Adelaide Festas & Buffet
 
 > Workspace de operação da Adelaide Festas & Buffet — buffet completo para
-> eventos (casamentos, debutantes, festas infantis e confraternizações) na
-> região de Belo Horizonte/MG. Construído sobre o
+> eventos (casamentos, festas de 15 anos, formaturas, bodas e eventos sociais)
+> em Ipatinga e toda a região do Vale do Aço/MG. Construído sobre o
 > [ÓrbitaOS](https://github.com/agenciaorbita-ia/OrbitaOS).
+>
+> **Este repositório é exclusivo da Adelaide Festas & Buffet** — outros
+> clientes têm estruturas próprias.
 
 Aqui vivem, em um único repositório, a memória do negócio, a identidade
 visual, os materiais de marketing e o site institucional.
@@ -15,14 +18,18 @@ visual, os materiais de marketing e o site institucional.
 ```
 adelaide-festas-e-buffet/
 ├── _memoria/       # Quem é a empresa, tom de voz, foco atual
-├── identidade/     # Design guide: cores, tipografia, padrão visual
-├── marketing/      # Posts e carrosséis de Instagram
+├── identidade/     # Marca: design guide + logos oficiais (imagens/)
+├── marketing/      # Posts e carrosséis de Instagram (por post, em conteudo/)
+├── comercial/      # Propostas comerciais e prospecção
 ├── projetos/       # Planos e especificações (site premium, catálogo)
 ├── site/           # Site institucional
-│   └── nextjs-site/  # App Next.js (é isso que a Vercel builda)
+│   ├── nextjs-site/  # App Next.js (é isso que a Vercel builda)
+│   └── fotos/        # Fotos originais do buffet e da equipe
 ├── saidas/         # Documentos pontuais
-├── dados/          # Arquivos para análise
-├── templates/      # Modelos do ÓrbitaOS
+├── dados/          # Drop zone: arquivos para análise (entrada temporária)
+├── scripts/        # Utilitários acionados pelas skills
+├── templates/      # Catálogos de skills e ferramentas do ÓrbitaOS
+├── lixeira/        # Itens fora de uso aguardando descarte (não versionada)
 └── .claude/skills/ # Skills de operação (/abrir, /carrossel, /salvar…)
 ```
 

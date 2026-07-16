@@ -36,10 +36,10 @@ const icones: Record<string, React.ReactNode> = {
       />
     </svg>
   ),
-  bolo: (
+  presente: (
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
       <path
-        d="M4 18.5h14M5 18.5v-6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6M11 10.5V8M11 8a1.6 1.6 0 0 0 1.6-1.6c0-.9-1.6-2.4-1.6-2.4S9.4 5.5 9.4 6.4A1.6 1.6 0 0 0 11 8ZM5 14.5c1.5 1.4 3 .2 4-.6 1.2 1.4 2.8 1.4 4 0 1 .8 2.5 2 4 .6"
+        d="M4.5 10.5V18a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-7.5M3.5 7h15v3.5h-15V7ZM11 7v12M11 7s-1-3.8-3.4-3.8A1.9 1.9 0 0 0 5.7 5.1C5.7 6.5 7.4 7 8.6 7H11Zm0 0s1-3.8 3.4-3.8a1.9 1.9 0 0 1 1.9 1.9C16.3 6.5 14.6 7 13.4 7H11Z"
         stroke="currentColor"
         strokeWidth="1.4"
         strokeLinecap="round"

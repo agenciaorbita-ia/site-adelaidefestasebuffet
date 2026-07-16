@@ -32,12 +32,14 @@ export const metadata: Metadata = {
     template: "%s | Adelaide Festas & Buffet",
   },
   description:
-    "Buffet completo em Ipatinga e toda a região do Vale do Aço para casamentos, debutantes, festas infantis e confraternizações. Salão, decoração, bebidas, equipe e cortesias inclusas — há 8 anos transformando celebrações em memórias.",
+    "Buffet completo em Ipatinga e toda a região do Vale do Aço para casamentos, festas de 15 anos, formaturas, bodas e eventos sociais. Bebidas, equipe e cortesias inclusas — há 8 anos transformando celebrações em memórias.",
   keywords: [
     "buffet para festas",
     "buffet casamento",
     "buffet debutante",
-    "buffet festa infantil",
+    "buffet 15 anos",
+    "buffet formatura",
+    "buffet bodas",
     "buffet Ipatinga",
     "buffet Vale do Aço",
     "buffet completo",
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Adelaide Festas & Buffet",
     title: "Buffet completo em Ipatinga e Vale do Aço — Adelaide Festas & Buffet",
     description:
-      "Casamentos, debutantes, festas infantis e confraternizações com tudo incluso: salão, decoração, bebidas, equipe e cortesias.",
+      "Casamentos, festas de 15 anos, formaturas, bodas e eventos sociais com tudo incluso: bebidas, equipe e cortesias.",
   },
   robots: { index: true, follow: true },
 };
@@ -59,7 +61,7 @@ const jsonLd = {
   "@type": "FoodEstablishment",
   name: "Adelaide Festas & Buffet",
   description:
-    "Buffet completo para casamentos, debutantes, festas infantis e confraternizações. Salão, decoração, bebidas, equipe e cortesias inclusas.",
+    "Buffet completo para casamentos, festas de 15 anos, formaturas, bodas e eventos sociais. Bebidas, equipe e cortesias inclusas.",
   servesCuisine: "Buffet para eventos",
   telephone: "+55-31-99540-6622",
   url: siteUrl,
