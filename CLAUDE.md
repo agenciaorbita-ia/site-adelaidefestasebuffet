@@ -164,11 +164,11 @@ Evitar: gíria e informalidade excessiva, jargão de marketing corporativo, ling
 
 ## Site institucional
 
-- **Stack:** Next.js (App Router) + Tailwind CSS v4 + Framer Motion, em `../site/nextjs-site/` (irmão da pasta OrbitaOS, dentro de `site/`)
+- **Stack:** Next.js (App Router) + Tailwind CSS v4 + Framer Motion, em `site/nextjs-site/` (dentro de `site/`, na raiz do repositório)
 - **No ar:** https://adelaidefestasebuffet.vercel.app — deploy automático a cada push na `main` (Vercel, root directory `site/nextjs-site`). **Todo push publica em produção** — commitar/pushar só com pedido explícito do usuário
 - **Direção de arte:** conceito "Noite de Gala", especificado em `projetos/site-premium/direcao-de-arte.md` — **implementado e validado** (jul/2026), incluindo auditoria mobile completa
 - **Conteúdo do site:** centralizado em `site/nextjs-site/lib/content.ts` — editar textos lá, não nos componentes
-- **Fotos do buffet:** originais em `../site/fotos/`; curadas para o site em `site/nextjs-site/assets/img/`
+- **Fotos do buffet:** originais em `site/fotos/`; curadas para o site em `site/nextjs-site/assets/img/`
 - **Sem preços no site** — todos os CTAs levam a orçamento via WhatsApp (31) 99540-6622
 - **Próximo projeto:** catálogo de produtos/serviços — plano aprovado em `projetos/catalogo-site/plano-catalogo.md` (aguardando ordem para implementar)
 - Blog ainda não existe; quando `/publicar-tema` for usado, confirmar o destino dos posts no projeto Next.js

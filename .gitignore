@@ -13,6 +13,26 @@ out/
 .DS_Store
 Thumbs.db
 
-# logs
+# editores
+.vscode/
+.idea/
+
+# Claude Code (sessões locais, não devem ir pro repo)
+.claude/projects/
+.claude/sessions/
+.claude/shell-snapshots/
+.claude/telemetry/
+.claude/file-history/
+.claude/backups/
+
+# logs e temporários
 *.log
 npm-debug.log*
+*.tmp
+
+# drop zone do usuário (só o README vai versionado)
+dados/*
+!dados/README.md
+
+# imagens geradas dos carrosséis (regeneráveis via render.js — só as fontes vão pro repo)
+marketing/conteudo/*/instagram/

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Carrossel — Valores e missão</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --azul: #161841; --azul-profundo: #0E102E; --prata: #F8FCFF;
+    --dourado: #DEC27D; --dourado-claro: #EAD9AC; --dourado-escuro: #C3A55C;
+    --creme: #F7F4EC; --creme-escuro: #EFE9DB;
+  }
+  .slide {
+    width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    font-family: 'Jost', sans-serif; display: flex; flex-direction: column;
+  }
+  .chrome { position: absolute; top: 64px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: center; z-index: 5; }
+  .chrome img { height: 88px; width: auto; }
+  .counter { font: 500 16px 'Jost'; letter-spacing: 0.2em; }
+  .content { position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 100px; }
+  .script { font-family: 'Great Vibes', cursive; font-size: 72px; line-height: 1; }
+  .eyebrow { font: 600 16px 'Jost'; letter-spacing: 0.3em; text-transform: uppercase; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 90px; line-height: 1.1; }
+  h2 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 64px; line-height: 1.16; }
+  .body { font: 300 29px/1.6 'Jost'; }
+  .filete { width: 84px; height: 3px; background: var(--dourado); }
+  .handle { position: absolute; bottom: 64px; left: 100px; right: 100px; z-index: 5; font: 500 18px 'Jost'; letter-spacing: 0.08em; display: flex; justify-content: space-between; padding-top: 24px; }
+
+  /* S1 — CAPA creme (alterna com a capa escura do carrossel anterior no feed) */
+  .s1 { background: var(--creme); color: var(--azul); }
+  .s1 .script { color: var(--dourado-escuro); margin-bottom: 24px; }
+  .s1 .sub { font: 300 30px/1.5 'Jost'; color: rgba(22,24,65,0.7); margin-top: 32px; max-width: 720px; }
+  .s1 .ornamento { margin-top: 60px; display: flex; align-items: center; gap: 18px; }
+  .s1 .ornamento .linha { width: 110px; height: 1px; background: rgba(195,165,92,0.6); }
+  .s1 .ornamento .diamante { width: 10px; height: 10px; background: var(--dourado-escuro); transform: rotate(45deg); }
+  .s1 .counter, .s1 .handle { color: rgba(22,24,65,0.55); }
+  .s1 .handle { border-top: 1px solid rgba(22,24,65,0.14); }
+
+  /* S2 — AMOR: foto no topo (azul) */
+  .s2 { background: var(--azul); color: var(--prata); }
+  .s2 .foto-topo { height: 580px; position: relative; }
+  .s2 .foto-topo img { width: 100%; height: 100%; object-fit: cover; }
+  .s2 .foto-topo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,16,46,0.55) 0%, rgba(22,24,65,0) 35%, rgba(22,24,65,0.85) 100%); }
+  .s2 .content { justify-content: flex-start; padding-top: 90px; }
+  .s2 .eyebrow { color: var(--dourado); }
+  .s2 h2 { margin: 28px 0 0; font-size: 60px; }
+  .s2 .body { color: rgba(248,252,255,0.85); max-width: 800px; margin-top: 36px; font-size: 27px; }
+  .s2 .counter { color: rgba(248,252,255,0.85); }
+  .s2 .handle { color: rgba(248,252,255,0.65); border-top: 1px solid rgba(248,252,255,0.14); }
+
+  /* S3 — HONESTIDADE (creme-escuro) */
+  .s3 { background: var(--creme-escuro); color: var(--azul); }
+  .s3 .eyebrow { color: var(--dourado-escuro); }
+  .s3 h2 { margin: 30px 0 36px; }
+  .s3 .body { color: rgba(22,24,65,0.78); max-width: 780px; margin-top: 40px; }
+  .s3 .counter, .s3 .handle { color: rgba(22,24,65,0.55); }
+  .s3 .handle { border-top: 1px solid rgba(22,24,65,0.14); }
+
+  /* S4 — FÉ (azul-profundo, tom de citação) */
+  .s4 { background: var(--azul-profundo); color: var(--prata); }
+  .s4 .aspas { position: absolute; top: 130px; right: 90px; font-family: 'Playfair Display', serif; font-size: 420px; line-height: 1; color: rgba(222,194,125,0.14); z-index: 1; }
+  .s4 .eyebrow { color: var(--dourado); }
+  .s4 h2 { margin: 30px 0 36px; }
+  .s4 .body { color: rgba(248,252,255,0.85); max-width: 780px; margin-top: 40px; }
+  .s4 .counter, .s4 .handle { color: rgba(248,252,255,0.65); }
+  .s4 .handle { border-top: 1px solid rgba(248,252,255,0.14); }
+
+  /* S5 — MISSÃO (creme) */
+  .s5 { background: var(--creme); color: var(--azul); }
+  .s5 .eyebrow { color: var(--dourado-escuro); }
+  .s5 h2 { margin: 30px 0 36px; font-size: 62px; }
+  .s5 .body { color: rgba(22,24,65,0.78); max-width: 780px; margin-top: 40px; }
+  .s5 .counter, .s5 .handle { color: rgba(22,24,65,0.55); }
+  .s5 .handle { border-top: 1px solid rgba(22,24,65,0.14); }
+
+  /* S6 — CTA FINAL (azul) */
+  .s6 { background: var(--azul); color: var(--prata); }
+  .s6 .content { align-items: center; text-align: center; }
+  .s6 img.logo-final { height: 210px; width: auto; margin-bottom: 60px; }
+  .s6 h2 { font-size: 72px; }
+  .s6 .body { color: rgba(248,252,255,0.8); margin: 32px 0 60px; max-width: 640px; }
+  .s6 .pill { display: inline-block; background: var(--dourado); color: var(--azul); font: 500 26px 'Jost'; letter-spacing: 0.06em; padding: 28px 72px; border-radius: 999px; }
+  .s6 .zap { margin-top: 34px; font: 500 28px 'Jost'; letter-spacing: 0.04em; color: var(--dourado); }
+  .s6 .handle { color: rgba(248,252,255,0.65); border-top: 1px solid rgba(248,252,255,0.14); justify-content: center; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 · CAPA -->
+<div class="slide s1">
+  <div class="chrome"><img src="logo-azul.png" alt="Adelaide Festas & Buffet"><span class="counter">01 / 06</span></div>
+  <div class="content">
+    <div class="script">O que nos move</div>
+    <h1>Amor, honestidade<br>e fé</h1>
+    <p class="sub">Os valores que colocamos em cada festa que preparamos.</p>
+    <div class="ornamento"><div class="linha"></div><div class="diamante"></div><div class="linha"></div></div>
+  </div>
+  <div class="handle"><span>@adelaidefestasebuffet</span><span>Arraste →</span></div>
+</div>
+
+<!-- SLIDE 2 · AMOR -->
+<div class="slide s2">
+  <div class="foto-topo"><img src="galeria-02.jpg" alt=""></div>
+  <div class="chrome"><img src="logo-dourado.png" alt=""><span class="counter">02 / 06</span></div>
+  <div class="content">
+    <div class="eyebrow">Valor 01 · Amor</div>
+    <h2>Coração em tudo<br>o que fazemos</h2>
+    <p class="body">Quando fazemos o bem e colocamos o coração no que fazemos, o resultado vem. É assim em cada mesa montada, em cada doce que sai da cozinha.</p>
+  </div>
+  <div class="handle"><span>@adelaidefestasebuffet</span><span>02</span></div>
+</div>
+
+<!-- SLIDE 3 · HONESTIDADE -->
+<div class="slide s3">
+  <div class="chrome"><img src="logo-azul.png" alt=""><span class="counter">03 / 06</span></div>
+  <div class="content">
+    <div class="eyebrow">Valor 02 · Honestidade</div>
+    <h2>Clareza do primeiro contato ao último doce</h2>
+    <div class="filete"></div>
+    <p class="body">Tudo incluso é tudo incluso de verdade: salão, buffet, decoração, bebidas e equipe. Você sabe exatamente o que está contratando, sem surpresas.</p>
+  </div>
+  <div class="handle"><span>@adelaidefestasebuffet</span><span>03</span></div>
+</div>
+
+<!-- SLIDE 4 · FÉ -->
+<div class="slide s4">
+  <div class="aspas">&rdquo;</div>
+  <div class="chrome"><img src="logo-dourado.png" alt=""><span class="counter">04 / 06</span></div>
+  <div class="content">
+    <div class="eyebrow">Valor 03 · Fé</div>
+    <h2>Fé que sustenta<br>o caminho</h2>
+    <div class="filete"></div>
+    <p class="body">O sonho do próprio negócio precisou esperar pelas dificuldades da vida. Foi retomado com o apoio da família, da fé — e dos clientes, que entraram para a família também.</p>
+  </div>
+  <div class="handle"><span>@adelaidefestasebuffet</span><span>04</span></div>
+</div>
+
+<!-- SLIDE 5 · MISSÃO -->
+<div class="slide s5">
+  <div class="chrome"><img src="logo-azul.png" alt=""><span class="counter">05 / 06</span></div>
+  <div class="content">
+    <div class="eyebrow">Nossa missão</div>
+    <h2>Você celebra.<br>A gente cuida de todo o resto.</h2>
+    <div class="filete"></div>
+    <p class="body">Nossa missão é deixar as famílias livres para viver seus momentos — do brinde ao último doce, sem preocupação.</p>
+  </div>
+  <div class="handle"><span>@adelaidefestasebuffet</span><span>05</span></div>
+</div>
+
+<!-- SLIDE 6 · CTA FINAL -->
+<div class="slide s6">
+  <div class="content">
+    <img class="logo-final" src="logo-dourado.png" alt="Adelaide Festas & Buffet">
+    <h2>Vamos planejar<br>a sua festa?</h2>
+    <p class="body">Chame a gente no WhatsApp — vai ser uma alegria celebrar com a sua família.</p>
+    <span class="pill">Chamar no WhatsApp</span>
+    <div class="zap">(31) 99540-6622</div>
+  </div>
+  <div class="handle"><span>@adelaidefestasebuffet</span></div>
+</div>
+
+</body>
+</html>
