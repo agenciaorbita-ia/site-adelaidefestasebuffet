@@ -8,7 +8,7 @@ export function Footer() {
   const ano = new Date().getFullYear();
 
   return (
-    <footer className="bg-azul-profundo pb-8 pt-12 text-prata/70">
+    <footer className="bg-azul-profundo pb-20 pt-12 text-prata/70 sm:pb-8">
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-[1.2fr_1fr_1fr] md:gap-12">
           <div className="col-span-2 md:col-span-1">
@@ -32,7 +32,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="transition hover:pl-1 hover:text-dourado"
+                    className="inline-block py-1 transition hover:pl-1 hover:text-dourado"
                   >
                     {link.label}
                   </a>

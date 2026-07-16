@@ -1,5 +1,7 @@
 # Direção de Arte Definitiva — Adelaide Festas & Buffet
 
+> **Status (jul/2026): implementada e em produção.** Passos 1–6 da ordem de implementação concluídos — tokens, Hero v3, galeria imersiva, micro-polish, passada mobile completa (auditoria com verificação programática: zero overflow em 390/360px, espaçamentos padronizados, áreas de toque ≥32px, interações testadas). Pendentes: nº real de festas para o contador da História (colher com a Adelaide), páginas do catálogo (passo 7 — plano próprio em `../catalogo-site/plano-catalogo.md`) e QA final de apresentação (passo 8).
+
 > Especificação final para a versão de apresentação ao cliente. Todas as decisões estão fechadas — este documento será implementado exatamente como escrito. Base: o site atual em `site/nextjs-site` (Next.js 16 + Tailwind v4 + Framer Motion), que já carrega a fundação correta e será **elevado**, não jogado fora — retrabalho zero é decisão de negócio: cada hora vai em impacto visível, não em reescrever o que já funciona.
 
 ## Conceito: "Noite de Gala"

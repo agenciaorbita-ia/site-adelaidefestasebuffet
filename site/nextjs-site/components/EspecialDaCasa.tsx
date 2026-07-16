@@ -118,16 +118,20 @@ export function EspecialDaCasa() {
             </div>
 
             <div className="mt-6 flex items-center justify-between">
-              <div className="flex gap-2">
+              <div className="flex">
                 {DESTAQUES.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setAtual(i)}
                     aria-label={`Ver depoimento ${i + 1}`}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      i === atual ? "w-6 bg-dourado" : "w-2 bg-azul/20"
-                    }`}
-                  />
+                    className="flex h-8 w-8 items-center justify-center"
+                  >
+                    <span
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        i === atual ? "w-6 bg-dourado" : "w-2 bg-azul/20"
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
               <div className="flex gap-2">
