@@ -21,7 +21,8 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
-const siteUrl = "https://adelaidefestasebuffet.com.br";
+// TODO: trocar pelo domínio próprio quando for registrado (ex: adelaidefestasebuffet.com.br)
+const siteUrl = "https://adelaidefestasebuffet.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

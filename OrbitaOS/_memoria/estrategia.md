@@ -18,7 +18,7 @@ Estruturação: organizar processos internos e construir presença digital profi
 - Responder mensagens repetidas (preços, datas, o que está incluso no pacote)
 
 **Próximas prioridades:**
-- ~~Site profissional~~ → **construído** (Next.js premium em `site/nextjs-site`, jul/2026): landing completa com hero, cardápio, benefícios, celebrações, história, galeria, depoimentos e formulário de orçamento → WhatsApp. Pendente: deploy (Vercel/Netlify), domínio e link da bio
+- ~~Site profissional~~ → **construído e no ar** (Next.js premium em `site/nextjs-site`, jul/2026): landing completa com hero, cardápio, benefícios, celebrações, história, galeria, depoimentos e formulário de orçamento → WhatsApp. **No ar em https://adelaidefestasebuffet.vercel.app** (Vercel, projeto `adelaidefestasebuffet`, deploy automático a cada push na main; repo github.com/eumateusalex/site-adelaidefestasebuffet, root directory `site/nextjs-site`). Pendente: domínio próprio (trocar o `siteUrl` no layout.tsx quando registrar) e link na bio do Instagram
 - Padronizar materiais visuais com a identidade da marca (design system do site já documentado no `identidade/design-guide.md`)
 - Estruturar um processo/modelo de orçamento reutilizável (formulário do site já formata o pedido no WhatsApp)
 - Organizar a agenda de eventos
