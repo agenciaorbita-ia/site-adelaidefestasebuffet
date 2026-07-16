@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ATENDIMENTO, INSTAGRAM_URL, ORCAMENTO } from "@/lib/content";
+import { ATENDIMENTO, FACEBOOK_URL, INSTAGRAM_URL, ORCAMENTO } from "@/lib/content";
 import {
   orcamentoMessage,
   whatsappUrl,
@@ -40,8 +40,8 @@ export function Orcamento() {
     <section id="orcamento" className="bg-azul py-16 sm:py-20">
       <div className="mx-auto grid max-w-6xl gap-6 px-5 lg:grid-cols-[1.4fr_1fr]">
         {/* Formulário */}
-        <Reveal>
-          <div className="rounded-xl bg-creme p-8 shadow-suave sm:p-10">
+        <Reveal className="h-full">
+          <div className="h-full rounded-xl bg-creme p-8 shadow-suave sm:p-10">
             <ScriptAccent>{ORCAMENTO.script}</ScriptAccent>
             <h2 className="font-display mt-3 text-3xl font-medium text-azul">
               {ORCAMENTO.titulo}
@@ -174,7 +174,7 @@ export function Orcamento() {
         </Reveal>
 
         {/* Card de atendimento */}
-        <Reveal delay={0.12}>
+        <Reveal delay={0.12} className="h-full">
           <div className="flex h-full flex-col justify-between rounded-xl border border-dourado/30 bg-azul-profundo/60 p-8 text-prata sm:p-10">
             <div>
               <ScriptAccent>{ATENDIMENTO.script}</ScriptAccent>
@@ -183,13 +183,13 @@ export function Orcamento() {
               </h2>
               <OrnamentDivider className="mt-5 justify-start" />
 
-              <dl className="mt-8 space-y-6">
+              <dl className="mt-8 space-y-4">
                 {ATENDIMENTO.itens.map((item) => (
                   <div key={item.label}>
                     <dt className="text-xs uppercase tracking-[0.18em] text-dourado">
                       {item.label}
                     </dt>
-                    <dd className="mt-1 text-lg text-prata/90">
+                    <dd className="mt-1 text-base text-prata/90">
                       {item.label === "WhatsApp" ? (
                         <a
                           href={WHATSAPP_DEFAULT}
@@ -208,6 +208,15 @@ export function Orcamento() {
                         >
                           {item.valor}
                         </a>
+                      ) : item.label === "Facebook" ? (
+                        <a
+                          href={FACEBOOK_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition hover:text-dourado"
+                        >
+                          {item.valor}
+                        </a>
                       ) : (
                         item.valor
                       )}
@@ -217,7 +226,7 @@ export function Orcamento() {
               </dl>
             </div>
 
-            <div className="mt-10 border-t border-prata/15 pt-5">
+            <div className="mt-8 border-t border-prata/15 pt-5">
               <p className="flex items-center gap-2.5 text-sm text-dourado">
                 <svg
                   width="16"

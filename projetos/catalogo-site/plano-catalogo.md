@@ -42,9 +42,9 @@ O site atual (`site/nextjs-site`, no ar em adelaidefestasebuffet.vercel.app) é 
 | Página | Objetivo | Seções |
 |---|---|---|
 | **Home** (ajustar) | Porta de entrada; distribuir para o catálogo | Mantém tudo; cards de Celebrações passam a linkar para `/festas/*` em vez do WhatsApp; nav ganha "Cardápios" e "Pacotes" |
-| **/festas/[tipo]** (4 páginas) | Convencer quem já sabe o tipo de festa; SEO local ("buffet de casamento BH") | Hero com foto do tipo; o que está incluso; cardápio resumido do tipo; galeria do tipo; depoimento relacionado; FAQ do tipo; CTA WhatsApp **pré-preenchido com o tipo** |
+| **/festas/[tipo]** (4 páginas) | Convencer quem já sabe o tipo de festa; SEO local ("buffet de casamento Ipatinga") | Hero com foto do tipo; o que está incluso; cardápio resumido do tipo; galeria do tipo; depoimento relacionado; FAQ do tipo; CTA WhatsApp **pré-preenchido com o tipo** |
 | **/cardapios** | Mostrar a comida em detalhe (modelo Catarse: foto + descrição + itens) | Categorias: salgados & finger food, jantar completo, mesa de frios & frutas, bolos & doces, bebidas; cada uma com itens listados e fotos; CTA duplo por categoria; botão "baixar cardápio em PDF" |
-| **/pacotes** | Comparação clara (modelo Sua Festa SP) | Cards/tabela comparativa dos pacotes reais da Adelaide; o que cada um inclui; cortesias; nota seg–dom exceto sábados; preço "a partir de" (**decisão pendente — ver §7**); CTA pré-preenchido com o pacote |
+| **/pacotes** | Comparação clara (modelo Sua Festa SP) | Cards/tabela comparativa dos pacotes reais da Adelaide; o que cada um inclui; cortesias; nota "entre em contato para verificarmos a disponibilidade da sua data"; preço "a partir de" (**decisão pendente — ver §7**); CTA pré-preenchido com o pacote |
 | **/galeria** | Prova visual; segurar o visitante | Grid filtrável por tipo de festa (chips: Todas/Casamento/Debutante/Infantil/Confraternização), lightbox atual reaproveitado |
 | **/orcamento** | Conversão máxima | Formulário atual expandido (tipo, data, convidados, pacote de interesse, salão próprio ou da Adelaide?) → WhatsApp; fase 2: simulador com estimativa |
 
@@ -84,7 +84,7 @@ Pacote      { id, nome, resumo, incluso[], cortesias[], cardapioIds[],
 3. **Galeria por tipo de festa** — filtros + lightbox (concorrentes têm Instagram bagunçado; aqui a noiva vê só casamentos).
 4. **Depoimentos ligados a fotos reais da festa** — avaliação do Google + foto do evento correspondente lado a lado; prova social dupla.
 5. **"Como funciona" em 8 passos** — timeline do primeiro contato à festa (inspirado no Sua Festa SP): reduz ansiedade de quem nunca contratou buffet.
-6. **FAQ com schema para IAs e Google** — perguntas reais do WhatsApp viram FAQ com `FAQPage` schema; o site passa a ser citado por assistentes de IA ("melhor buffet em BH que inclui bebidas?").
+6. **FAQ com schema para IAs e Google** — perguntas reais do WhatsApp viram FAQ com `FAQPage` schema; o site passa a ser citado por assistentes de IA ("melhor buffet em Ipatinga que inclui bebidas?").
 7. **Cardápio em PDF com a marca** — gerado a partir dos dados do site (sempre atualizado), baixável para compartilhar com a família.
 8. **Selo de tempo de resposta** — "Respondemos em até X min em horário comercial" ao lado dos CTAs (velocidade de resposta é o maior fator de fechamento; combina com o atendimento real da Adelaide).
 

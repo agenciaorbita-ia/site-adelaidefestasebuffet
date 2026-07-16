@@ -1,6 +1,12 @@
 import Image from "next/image";
 import logoDourado from "@/assets/img/logo-dourado.png";
-import { INSTAGRAM_HANDLE, INSTAGRAM_URL, NAV_LINKS } from "@/lib/content";
+import {
+  FACEBOOK_HANDLE,
+  FACEBOOK_URL,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+  NAV_LINKS,
+} from "@/lib/content";
 import { WHATSAPP_DEFAULT, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 import { OrnamentDivider } from "./ui/OrnamentDivider";
 
@@ -21,6 +27,72 @@ export function Footer() {
               Buffet completo para celebrar os momentos que importam — com
               amor, honestidade e o mesmo carinho de sempre.
             </p>
+            <div className="mt-5 flex items-center gap-4">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram da Adelaide Festas & Buffet"
+                className="text-prata/60 transition hover:text-dourado"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook da Adelaide Festas & Buffet"
+                className="text-prata/60 transition hover:text-dourado"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <path
+                    d="M15.5 8h-1.7c-.9 0-1.3.5-1.3 1.4V11h3l-.4 2.6h-2.6V21"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <nav aria-label="Links do site">
@@ -66,7 +138,22 @@ export function Footer() {
                   Instagram · {INSTAGRAM_HANDLE}
                 </a>
               </li>
-              <li className="text-prata/55">Belo Horizonte e região · MG</li>
+              <li>
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-dourado"
+                >
+                  Facebook · {FACEBOOK_HANDLE}
+                </a>
+              </li>
+              <li className="text-prata/55">
+                Rua Diadema, 426 · Parque Caravelas
+              </li>
+              <li className="text-prata/55">
+                Atendemos Ipatinga e toda a região do Vale do Aço
+              </li>
             </ul>
           </div>
         </div>

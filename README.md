@@ -1,113 +1,85 @@
-# ÓrbitaOS
+# Adelaide Festas & Buffet
 
-> O sistema operacional do seu negócio dentro do Claude Code.
+> Workspace de operação da Adelaide Festas & Buffet — buffet completo para
+> eventos (casamentos, debutantes, festas infantis e confraternizações) na
+> região de Belo Horizonte/MG. Construído sobre o
+> [ÓrbitaOS](https://github.com/agenciaorbita-ia/OrbitaOS).
 
-Você acaba de instalar o ÓrbitaOS. Em poucos minutos, sua empresa vai
-ter uma memória própria, uma identidade visual aplicada em tudo que
-o sistema gerar, e 15 skills prontas para operar marketing, SEO, anúncios
-e produção sob sua coordenação.
-
-A seguir, o passo a passo inicial.
+Aqui vivem, em um único repositório, a memória do negócio, a identidade
+visual, os materiais de marketing e o site institucional.
 
 ---
 
-## Iniciando o sistema
-
-Há dois caminhos possíveis. Escolha o que for mais adequado ao seu fluxo de trabalho.
-
-### Pelo Claude (mais rápido)
-
-Abra o Claude Code em qualquer pasta e cole:
+## Estrutura
 
 ```
-Clona o https://github.com/agenciaorbita-ia/OrbitaOS.git na pasta atual,
-entra nela e roda o /instalar.
+adelaide-festas-e-buffet/
+├── _memoria/       # Quem é a empresa, tom de voz, foco atual
+├── identidade/     # Design guide: cores, tipografia, padrão visual
+├── marketing/      # Posts e carrosséis de Instagram
+├── projetos/       # Planos e especificações (site premium, catálogo)
+├── site/           # Site institucional
+│   └── nextjs-site/  # App Next.js (é isso que a Vercel builda)
+├── saidas/         # Documentos pontuais
+├── dados/          # Arquivos para análise
+├── templates/      # Modelos do ÓrbitaOS
+└── .claude/skills/ # Skills de operação (/abrir, /carrossel, /salvar…)
 ```
 
-O sistema clona o repositório, entra na pasta nova e inicia a entrevista
-de setup. Basta responder às perguntas.
+---
 
-### Pelo terminal (mais previsível)
+## O site
 
-```
-git clone https://github.com/agenciaorbita-ia/OrbitaOS.git
-cd OrbitaOS
-code .
-```
+- **No ar:** https://adelaidefestasebuffet.vercel.app
+- **Stack:** Next.js (App Router) + Tailwind CSS v4 + Framer Motion
+- **Código:** `site/nextjs-site/` — a Vercel usa essa pasta como root
+  directory, então **só o site vai para produção**; memória e marketing
+  ficam apenas no repositório
+- **Deploy:** automático a cada push na `main`. Todo push publica em
+  produção — commits no site só com aprovação
+- **Conteúdo:** textos centralizados em `site/nextjs-site/lib/content.ts`
+  (editar lá, não nos componentes)
+- **Direção de arte:** conceito "Noite de Gala", especificado em
+  `projetos/site-premium/direcao-de-arte.md`
+- **Sem preços no site** — todos os CTAs levam a orçamento via WhatsApp
 
-Na janela do VS Code: terminal integrado → `claude` → `/instalar`.
+**Próximo projeto:** catálogo de produtos e serviços — plano em
+`projetos/catalogo-site/plano-catalogo.md`.
 
 ---
 
-Quando o `/instalar` terminar, renomeie a pasta `OrbitaOS/` para o nome do
-seu negócio (feche o VS Code, renomeie no Explorer/Finder, abra novamente).
-A pasta não permanece como "OrbitaOS" — ela passa a representar o seu
-negócio.
+## Identidade da marca
 
-O `/instalar` é executado uma única vez. Ele entrevista você sobre o negócio,
-monta a memória e configura o sistema. A partir daí, o sistema está pronto para uso.
+Paleta definida em `identidade/design-guide.md`:
 
----
+| Cor | Hex | Uso |
+|-----|-----|-----|
+| Azul | `#161841` | Fundo principal (~60%) |
+| Prata | `#F8FCFF` | Textos e fundos claros (~30%) |
+| Dourado | `#DEC27D` | Destaques, filetes e CTAs (~10%) |
 
-## O sistema
-
-**Núcleo** — a operação do dia a dia
-`/abrir` carrega o contexto antes de cada sessão de trabalho · `/salvar`
-faz commit e push no GitHub · `/atualizar` varre o projeto e atualiza
-a memória · `/novo-projeto` cria uma pasta isolada para cada cliente ou
-iniciativa · `/mapear-rotinas` identifica tarefas repetidas e as
-transforma em skill personalizada.
-
-**Conteúdo e SEO** — a vitrine pública da empresa
-`/carrossel` cria carrosséis 1080×1350 com a identidade da marca (com ou
-sem foto gerada por IA) · `/publicar-tema` transforma um tema em artigo de
-blog, carrossel e três legendas prontas · `/seo` executa o fluxo completo
-de 8 etapas (demanda, concorrência, GMB, on-page, conteúdo, ads,
-monitoramento, GEO) · `/responder-avaliacoes` escreve respostas para
-avaliações do Google · `/aprovar-post` publica blog, Instagram e Facebook
-em um único comando.
-
-**Anúncios pagos** — onde o investimento entra
-`/anuncio-google` monta a campanha completa em CSV pronto para importar
-no Google Ads Editor · `/relatorio-ads` lê os exports de Google e Meta
-e devolve um relatório semanal com alertas e recomendações.
-
-**Produção** — ferramentas do dia a dia
-`/analisar-dados` lê CSV, XLSX ou PDF e gera um resumo executivo ·
-`/email-profissional` redige e-mails a partir de contexto livre.
+Tom de voz: caloroso, afetivo e familiar. Detalhamento em
+`_memoria/preferencias.md`.
 
 ---
 
-## A tese
+## Como trabalhar neste workspace
 
-IA não é uma ferramenta que sua empresa usa. É o sistema operacional sobre
-o qual ela roda.
+O dia a dia acontece pelo Claude Code, com as skills em `.claude/skills/`:
 
-A diferença não está na velocidade, e sim na capacidade nova — uma pessoa
-com IA constrói o que antes exigia um time inteiro. Cada processo crítico
-que hoje opera em ciclo aberto (decide → executa → não mede → repete às
-cegas) passa a operar em ciclo fechado dentro do ÓrbitaOS (decide →
-executa → captura → realimenta → ajusta automaticamente).
+- `/abrir` — carrega o contexto do negócio no início da sessão
+- `/carrossel` — cria carrosséis de Instagram com a identidade da marca
+- `/publicar-tema` — transforma um tema em artigo + carrossel + legendas
+- `/salvar` — commit e push para este repositório
+- `/atualizar` — varre o projeto e atualiza a memória
 
-O sistema não substitui você. Ele se torna parte da sua empresa.
-
----
-
-## Como o ÓrbitaOS pensa
-
-`_memoria/` é o núcleo de contexto. Tudo que importa sobre o seu negócio
-mora aqui — quem é a empresa, como ela se comunica, o que está em foco
-nesta semana. O Claude lê esse conteúdo antes de cada resposta. Quanto
-melhor a memória, melhor o sistema.
-
-`identidade/` é a marca. Cores, fontes, logo, padrão visual. Todo
-carrossel, slide ou peça que o sistema gera respeita essas diretrizes.
-
-`marketing/`, `saidas/` e `scripts/` concentram os resultados. O sistema
-produz, versiona no GitHub, e tudo permanece com você.
+As regras de operação completas estão no `CLAUDE.md`.
 
 ---
 
-## Suporte
+## Contato
 
-[agenciaorbita.online](https://agenciaorbita.online)
+- Instagram: [@adelaidefestasebuffet](https://instagram.com/adelaidefestasebuffet)
+- WhatsApp: (31) 99540-6622
+
+Operado por [Agência Órbita](https://agenciaorbita.online).

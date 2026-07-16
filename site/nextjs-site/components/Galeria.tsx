@@ -53,8 +53,11 @@ function FaixaImersiva({ onAbrir }: { onAbrir: (i: number) => void }) {
   const x = useTransform(scrollYProgress, [0, 1], ["2%", "-58%"]);
 
   return (
-    <div ref={ref} className="relative h-[240vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+    <div ref={ref} className="relative h-[160vh]">
+      <div className="sticky top-0 flex h-screen flex-col justify-center gap-10 overflow-hidden">
+        <div className="w-full px-5">
+          <SectionHeader script={GALERIA.script} titulo={GALERIA.titulo} />
+        </div>
         <motion.div style={{ x }} className="flex items-center gap-6 pl-[6vw]">
           {fotos.map((foto, i) => (
             <button
@@ -63,9 +66,9 @@ function FaixaImersiva({ onAbrir }: { onAbrir: (i: number) => void }) {
               aria-label={`Ampliar foto ${i + 1} da galeria`}
               className={`group relative shrink-0 overflow-hidden rounded-xl ${
                 i % 2 === 0
-                  ? "aspect-[3/4] h-[58vh] self-center"
-                  : "aspect-[3/4] h-[44vh] " +
-                    (i % 4 === 1 ? "self-start mt-[8vh]" : "self-end mb-[8vh]")
+                  ? "aspect-[3/4] h-[50vh] self-center"
+                  : "aspect-[3/4] h-[38vh] " +
+                    (i % 4 === 1 ? "self-start mt-[6vh]" : "self-end mb-[6vh]")
               }`}
             >
               <Image
@@ -84,7 +87,7 @@ function FaixaImersiva({ onAbrir }: { onAbrir: (i: number) => void }) {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex h-[44vh] w-64 shrink-0 flex-col items-center justify-center gap-3 self-center rounded-xl border border-dourado/40 text-center transition hover:border-dourado"
+            className="group flex h-[38vh] w-64 shrink-0 flex-col items-center justify-center gap-3 self-center rounded-xl border border-dourado/40 text-center transition hover:border-dourado"
           >
             <span className="font-script text-3xl text-dourado-escuro">
               e muito mais
@@ -151,15 +154,19 @@ export function Galeria() {
 
   return (
     <section id="galeria" className="bg-creme py-16 sm:py-20 lg:pb-0">
-      <div className="mx-auto max-w-6xl px-5">
-        <SectionHeader script={GALERIA.script} titulo={GALERIA.titulo} />
-      </div>
-
       {reduce ? (
-        <GradeFotos onAbrir={setAberta} />
+        <>
+          <div className="mx-auto max-w-6xl px-5">
+            <SectionHeader script={GALERIA.script} titulo={GALERIA.titulo} />
+          </div>
+          <GradeFotos onAbrir={setAberta} />
+        </>
       ) : (
         <>
           <div className="lg:hidden">
+            <div className="mx-auto max-w-6xl px-5">
+              <SectionHeader script={GALERIA.script} titulo={GALERIA.titulo} />
+            </div>
             <GradeFotos onAbrir={setAberta} />
           </div>
           <div className="hidden lg:block">

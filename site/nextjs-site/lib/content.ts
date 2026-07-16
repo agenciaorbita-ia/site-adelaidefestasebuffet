@@ -1,5 +1,7 @@
 export const INSTAGRAM_URL = "https://instagram.com/adelaidefestasebuffet";
 export const INSTAGRAM_HANDLE = "@adelaidefestasebuffet";
+export const FACEBOOK_URL = "https://facebook.com/adelaidefestaebuffet";
+export const FACEBOOK_HANDLE = "Adelaide Festas e Buffet";
 
 export const NAV_LINKS = [
   { href: "#servicos", label: "O que servimos" },
@@ -94,7 +96,7 @@ export const BENEFICIOS = {
         "Experiência, amor e honestidade em cada evento — como manda a tradição da casa.",
     },
   ],
-  nota: "Valores para eventos realizados de segunda a domingo, exceto sábados.",
+  nota: "Entre em contato para verificarmos a disponibilidade da sua data.",
 };
 
 export const ESPECIAL = {
@@ -210,9 +212,11 @@ export const ATENDIMENTO = {
   itens: [
     { label: "WhatsApp", valor: "(31) 99540-6622" },
     { label: "Instagram", valor: "@adelaidefestasebuffet" },
-    { label: "Região", valor: "Belo Horizonte e região · MG" },
+    { label: "Facebook", valor: "Adelaide Festas e Buffet" },
+    { label: "Endereço", valor: "Rua Diadema, 426 · Parque Caravelas" },
+    { label: "Região", valor: "Ipatinga e toda a região do Vale do Aço" },
   ],
-  nota: "Eventos de segunda a domingo, exceto sábados. Agenda com datas limitadas.",
+  nota: "Entre em contato conosco e verificaremos a disponibilidade para atendê-lo(a).",
 };
 
 export const ORCAMENTO = {

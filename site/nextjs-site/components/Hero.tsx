@@ -79,7 +79,7 @@ export function Hero() {
         <div className="absolute inset-0 animate-kenburns">
           <Image
             src={heroImg}
-            alt="Mesa de buffet da Adelaide Festas & Buffet em Belo Horizonte"
+            alt="Mesa de buffet da Adelaide Festas & Buffet em Ipatinga"
             fill
             className="object-cover"
             sizes="100vw"

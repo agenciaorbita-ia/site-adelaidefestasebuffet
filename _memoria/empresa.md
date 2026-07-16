@@ -22,7 +22,10 @@
 
 **Contatos:**
 - Instagram: @adelaidefestasebuffet
+- Facebook: facebook.com/adelaidefestaebuffet (URL com "festa" no singular)
 - WhatsApp: (31) 99540-6622
+- Endereço: Rua Diadema, 426 · Parque Caravelas
+- Área de atendimento: Ipatinga e toda a região do Vale do Aço/MG
 
 **História da marca:**
 Adelaide descobriu o amor pela cozinha aos 16 anos, quando se casou. Começou vendendo nas ruas — beijo-quente, tortas, bolos e chup-chup. Passou a cozinhar para buffets e, mais tarde, abriu o próprio negócio. Os bolos sempre foram o ponto mais elogiado pelos clientes. Hoje são 8 anos dedicados ao buffet.
@@ -31,4 +34,4 @@ Casada há 25 anos, mãe de três filhos, avó de uma neta. O sonho de ter o pr�
 
 **Valores centrais:** amor, honestidade e fé. Frase-guia usada pela própria Adelaide: "A palavra final vem de Deus. Nós apenas traçamos o caminho."
 
-**Condições comerciais observadas:** valores de pacotes divulgados valem para eventos de segunda a domingo, exceto sábados.
+**Condições comerciais:** disponibilidade de datas sempre sob consulta — orientar o cliente a entrar em contato para verificar a disponibilidade. (A antiga regra "segunda a domingo, exceto sábados" não é real — não usar.)

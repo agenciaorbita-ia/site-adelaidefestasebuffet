@@ -28,17 +28,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Buffet completo em Belo Horizonte — Adelaide Festas & Buffet",
+      "Buffet completo em Ipatinga e Vale do Aço — Adelaide Festas & Buffet",
     template: "%s | Adelaide Festas & Buffet",
   },
   description:
-    "Buffet completo em Belo Horizonte para casamentos, debutantes, festas infantis e confraternizações. Salão, decoração, bebidas, equipe e cortesias inclusas — há 8 anos transformando celebrações em memórias.",
+    "Buffet completo em Ipatinga e toda a região do Vale do Aço para casamentos, debutantes, festas infantis e confraternizações. Salão, decoração, bebidas, equipe e cortesias inclusas — há 8 anos transformando celebrações em memórias.",
   keywords: [
     "buffet para festas",
     "buffet casamento",
     "buffet debutante",
     "buffet festa infantil",
-    "buffet Belo Horizonte",
+    "buffet Ipatinga",
+    "buffet Vale do Aço",
     "buffet completo",
   ],
   openGraph: {
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Adelaide Festas & Buffet",
-    title: "Buffet completo em Belo Horizonte — Adelaide Festas & Buffet",
+    title: "Buffet completo em Ipatinga e Vale do Aço — Adelaide Festas & Buffet",
     description:
       "Casamentos, debutantes, festas infantis e confraternizações com tudo incluso: salão, decoração, bebidas, equipe e cortesias.",
   },
@@ -62,14 +63,18 @@ const jsonLd = {
   servesCuisine: "Buffet para eventos",
   telephone: "+55-31-99540-6622",
   url: siteUrl,
-  sameAs: ["https://instagram.com/adelaidefestasebuffet"],
-  areaServed: {
-    "@type": "City",
-    name: "Belo Horizonte",
-  },
+  sameAs: [
+    "https://instagram.com/adelaidefestasebuffet",
+    "https://facebook.com/adelaidefestaebuffet",
+  ],
+  areaServed: [
+    { "@type": "City", name: "Ipatinga" },
+    { "@type": "AdministrativeArea", name: "Vale do Aço" },
+  ],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Belo Horizonte",
+    streetAddress: "Rua Diadema, 426 — Parque Caravelas",
+    addressLocality: "Ipatinga",
     addressRegion: "MG",
     addressCountry: "BR",
   },

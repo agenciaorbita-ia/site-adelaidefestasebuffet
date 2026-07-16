@@ -133,7 +133,7 @@ Operação da Adelaide Festas & Buffet: buffet completo para eventos (casamentos
 
 ## Sobre a empresa
 
-Adelaide Festas & Buffet é um buffet de eventos. Atua na região de Belo Horizonte/MG atendendo famílias que buscam celebrar sem preocupação, com pacote tudo-incluso (salão, buffet, decoração, bebidas, equipe e cortesias). A operação é liderada pela Adelaide (fundadora), com apoio do marido e de uma equipe capacitada de eventos.
+Adelaide Festas & Buffet é um buffet de eventos. Atende Ipatinga e toda a região do Vale do Aço/MG (endereço: Rua Diadema, 426 · Parque Caravelas), atendendo famílias que buscam celebrar sem preocupação, com pacote tudo-incluso (salão, buffet, decoração, bebidas, equipe e cortesias). A operação é liderada pela Adelaide (fundadora), com apoio do marido e de uma equipe capacitada de eventos.
 
 ## Setores e responsáveis
 
@@ -159,7 +159,7 @@ Evitar: gíria e informalidade excessiva, jargão de marketing corporativo, ling
 
 - Cada setor tem sua pasta na raiz
 - Propostas comerciais salvar em `comercial/propostas/`
-- Pacotes divulgados valem de segunda a domingo, exceto sábados — considerar essa regra em qualquer material comercial
+- **Nunca** afirmar que pacotes valem "de segunda a domingo, exceto sábados" — essa regra não é real. Em qualquer material que fale de datas/dias de evento, usar sempre algo como: "Entre em contato para verificarmos a disponibilidade"
 - Consultar `identidade/design-guide.md` antes de qualquer peça visual (cores azul #161841, prata #F8FCFF, dourado #DEC27D) — inclui o design system completo do site
 
 ## Site institucional
