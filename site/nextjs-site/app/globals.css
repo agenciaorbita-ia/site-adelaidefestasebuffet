@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Adelaide Festas & Buffet */
+  --color-azul: #161841;
+  --color-azul-claro: #262a5e;
+  --color-azul-profundo: #0e102e;
+  --color-prata: #f8fcff;
+  --color-dourado: #dec27d;
+  --color-dourado-claro: #ead9ac;
+  --color-dourado-escuro: #c3a55c;
+  --color-creme: #f7f4ec;
+  --color-creme-escuro: #efe9db;
+  --color-tinta: #2b2d55;
+
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-jost);
+  --font-script: var(--font-great-vibes);
+
+  --shadow-suave: 0 20px 60px -24px rgb(22 24 65 / 0.22);
+  --shadow-card: 0 12px 40px -16px rgb(22 24 65 / 0.16);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 10s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 2.6s ease-in-out infinite;
+  --animate-marquee: marquee 46s linear infinite;
+  --animate-kenburns: kenburns 18s ease-in-out infinite alternate;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgb(222 194 125 / 0.55);
+    }
+    60% {
+      box-shadow: 0 0 0 16px rgb(222 194 125 / 0);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes kenburns {
+    from {
+      transform: scale(1) translateY(0);
+    }
+    to {
+      transform: scale(1.08) translateY(-2%);
+    }
+  }
+}
+
+/* Brilho premium que varre o botão no hover */
+@utility btn-brilho {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    background: linear-gradient(
+      100deg,
+      transparent,
+      rgb(248 252 255 / 0.5),
+      transparent
+    );
+    transform: translateX(-140%) skewX(-18deg);
+    transition: transform 0.65s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    transform: translateX(280%) skewX(-18deg);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Âncoras não podem parar embaixo do header fixo */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+/* Navegação por teclado com foco visível na cor da marca */
+:focus-visible {
+  outline: 2px solid var(--color-dourado);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-creme);
+  color: var(--color-azul);
+  overflow-x: clip;
+}
+
+::selection {
+  background-color: var(--color-dourado);
+  color: var(--color-azul);
+}
+
+/* Scrollbar discreta no espírito da marca */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-creme);
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-azul) 30%, var(--color-creme));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--color-azul) 50%, var(--color-creme));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

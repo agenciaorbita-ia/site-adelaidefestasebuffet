@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/img/logo-dourado.png";
+
+const whatsapp = "https://wa.me/5531995406622?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes.";
+
+const links = [
+  { href: "#sobre", label: "Sobre" },
+  { href: "#diferenciais", label: "O que inclui" },
+  { href: "#galeria", label: "Galeria" },
+  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#contato", label: "Contato" },
+];
+---
+
+<header class="absolute top-0 left-0 right-0 z-30">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <a href="#" class="block">
+      <Image src={logo} alt="Adelaide Festas & Buffet" class="h-16 w-auto" widths={[200, 300]} />
+    </a>
+
+    <nav class="hidden items-center gap-8 md:flex">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm tracking-wide text-prata/90 transition hover:text-dourado"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a
+      href={whatsapp}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden rounded-full border border-dourado px-5 py-2 text-sm text-dourado transition hover:bg-dourado hover:text-azul md:inline-block"
+    >
+      (31) 99540-6622
+    </a>
+  </div>
+</header>

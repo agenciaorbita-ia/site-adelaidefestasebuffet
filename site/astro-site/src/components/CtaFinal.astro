@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/img/logo-azul.png";
+
+const whatsapp = "https://wa.me/5531995406622?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes.";
+---
+
+<section id="contato" class="bg-prata py-24">
+  <div class="mx-auto max-w-3xl px-6 text-center">
+    <Image src={logo} alt="Adelaide Festas & Buffet" class="mx-auto h-24 w-auto" widths={[280, 400]} />
+    <h2 class="font-display mt-4 text-3xl font-medium text-azul md:text-4xl">
+      Seu grande dia merece o melhor
+    </h2>
+    <p class="mt-4 text-azul/75">
+      Agenda com datas limitadas. Entre em contato e garanta o seu pacote.
+    </p>
+
+    <div class="mt-8 flex justify-center">
+      <a
+        href={whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full bg-azul px-10 py-4 text-sm font-medium tracking-wide text-prata transition hover:bg-azul-claro"
+      >
+        Falar no WhatsApp — (31) 99540-6622
+      </a>
+    </div>
+  </div>
+</section>
