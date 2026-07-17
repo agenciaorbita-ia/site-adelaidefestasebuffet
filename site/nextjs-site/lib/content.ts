@@ -3,8 +3,11 @@ export const INSTAGRAM_HANDLE = "@adelaidefestasebuffet";
 export const FACEBOOK_URL = "https://facebook.com/adelaidefestaebuffet";
 export const FACEBOOK_HANDLE = "Adelaide Festas e Buffet";
 
+export const CATALOGO_URL = "/catalogo-adelaide-festas-e-buffet.pdf";
+
 export const NAV_LINKS = [
   { href: "#servicos", label: "O que servimos" },
+  { href: CATALOGO_URL, label: "Catálogo" },
   { href: "#celebracoes", label: "Celebrações" },
   { href: "#historia", label: "Nossa história" },
   { href: "#galeria", label: "Galeria" },
@@ -12,7 +15,7 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  script: "Bem-vindos à Adelaide",
+  script: "Bem-vindos à Adelaide Festas & Buffet",
   titulo: "Onde o amor é celebrado, cuidamos de cada detalhe",
   sub: "Buffet completo para casamentos, festas de 15 anos, formaturas, bodas e eventos sociais — bebidas, equipe e cortesias inclusas, para você só aproveitar.",
   selos: [
@@ -52,6 +55,11 @@ export const SERVICOS = {
       img: "servico-doces",
     },
   ],
+  catalogo: {
+    texto:
+      "Quer escolher com calma? Preparamos um catálogo com todas as opções de cardápio, entradinhas e acompanhamentos.",
+    cta: "Ver o catálogo completo",
+  },
 };
 
 export const BENEFICIOS = {

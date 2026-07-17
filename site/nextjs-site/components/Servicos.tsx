@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { SERVICOS } from "@/lib/content";
+import { CATALOGO_URL, SERVICOS } from "@/lib/content";
 import { IMAGENS } from "@/lib/images";
 import { SectionHeader } from "./ui/SectionHeader";
-import { Stagger, StaggerItem } from "./ui/Reveal";
+import { Reveal, Stagger, StaggerItem } from "./ui/Reveal";
 
 export function Servicos() {
   return (
@@ -41,6 +41,43 @@ export function Servicos() {
             </StaggerItem>
           ))}
         </Stagger>
+
+        <Reveal>
+          <div className="mt-12 flex flex-col items-center gap-4 text-center">
+            <p className="max-w-md text-sm leading-relaxed text-azul/70">
+              {SERVICOS.catalogo.texto}
+            </p>
+            <a
+              href={CATALOGO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-brilho inline-flex items-center gap-2.5 rounded-full border border-dourado bg-transparent px-7 py-3 text-sm font-medium tracking-wide text-azul transition-all duration-300 hover:bg-dourado hover:shadow-card active:scale-[0.98]"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2.5H6a1.5 1.5 0 0 0-1.5 1.5v12A1.5 1.5 0 0 0 6 17.5h8a1.5 1.5 0 0 0 1.5-1.5V6L12 2.5z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 2.5V6h3.5M7.5 10.5h5M7.5 13.5h5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {SERVICOS.catalogo.cta}
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

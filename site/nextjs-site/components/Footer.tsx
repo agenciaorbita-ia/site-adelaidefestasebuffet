@@ -104,6 +104,10 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    {...(!link.href.startsWith("#") && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
                     className="inline-block py-1 transition hover:pl-1 hover:text-dourado"
                   >
                     {link.label}

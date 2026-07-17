@@ -24,8 +24,13 @@ export function Header() {
   const fixo = rolou || menuAberto;
 
   /** Fecha o menu e rola depois da animação de saída — o scroll nativo
-   *  seria cancelado quando o link clicado é desmontado. */
+   *  seria cancelado quando o link clicado é desmontado. Links que não
+   *  são âncora (ex.: PDF do catálogo) seguem a navegação padrão. */
   function navegarMobile(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    if (!href.startsWith("#")) {
+      setMenuAberto(false);
+      return;
+    }
     e.preventDefault();
     setMenuAberto(false);
     window.setTimeout(() => {
@@ -59,6 +64,10 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
+              {...(!link.href.startsWith("#") && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               className={`group relative text-sm tracking-wide transition ${
                 claro
                   ? "text-prata/90 hover:text-dourado"
@@ -137,6 +146,10 @@ export function Header() {
                   <a
                     href={link.href}
                     onClick={(e) => navegarMobile(e, link.href)}
+                    {...(!link.href.startsWith("#") && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
                     className="block border-b border-azul/8 py-3 font-display text-lg text-azul transition hover:pl-2 hover:text-dourado-escuro"
                   >
                     {link.label}
